@@ -1,24 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Delegate View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="DelegateViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fiz-L5-N54">
+                                <rect key="frame" x="171.5" y="358" width="71" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nwi-FP-Ngi">
+                                <rect key="frame" x="96" y="424" width="222" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Take Me To Boss!"/>
+                                <connections>
+                                    <segue destination="AV2-f7-q2Q" kind="show" id="4ce-Zs-tw7"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fiz-L5-N54" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1jC-kK-Tws"/>
+                            <constraint firstItem="nwi-FP-Ngi" firstAttribute="top" secondItem="fiz-L5-N54" secondAttribute="bottom" constant="30" id="CF7-HK-2TL"/>
+                            <constraint firstItem="nwi-FP-Ngi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="G0j-da-lsv"/>
+                            <constraint firstItem="nwi-FP-Ngi" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="HhO-uK-70A"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="spellLabel" destination="fiz-L5-N54" id="ECC-CO-4uS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Boss View Controller-->
+        <scene sceneID="nQt-fR-Faa">
+            <objects>
+                <viewController id="AV2-f7-q2Q" customClass="BossViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rxm-Yc-Vwe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yuR-3E-76J">
+                                <rect key="frame" x="57" y="344" width="300" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="9R2-vs-dk1"/>
+                                    <constraint firstAttribute="height" constant="50" id="dND-OE-ZDe"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7OR-Tv-EjV">
+                                <rect key="frame" x="114" y="424" width="186" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Take Me Back!"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="AV2-f7-q2Q" eventType="touchUpInside" id="w27-NN-GzA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7OR-Tv-EjV" firstAttribute="top" secondItem="yuR-3E-76J" secondAttribute="bottom" constant="30" id="Odq-JC-5hy"/>
+                            <constraint firstItem="7OR-Tv-EjV" firstAttribute="centerX" secondItem="rxm-Yc-Vwe" secondAttribute="centerX" id="bFp-ka-0Dm"/>
+                            <constraint firstItem="7OR-Tv-EjV" firstAttribute="centerY" secondItem="rxm-Yc-Vwe" secondAttribute="centerY" id="ixl-hF-IB9"/>
+                            <constraint firstItem="yuR-3E-76J" firstAttribute="centerX" secondItem="rxm-Yc-Vwe" secondAttribute="centerX" id="nI6-h1-7Cg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tfP-Ue-7e6"/>
+                    </view>
+                    <connections>
+                        <outlet property="spellTextField" destination="yuR-3E-76J" id="3zv-FS-N0A"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mbH-sf-bJj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="886" y="23"/>
         </scene>
     </scenes>
 </document>

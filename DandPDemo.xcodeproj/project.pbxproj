@@ -8,24 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		16FD20A522D518A600857454 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 16FD20A422D518A600857454 /* AppDelegate.m */; };
-		16FD20A822D518A600857454 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16FD20A722D518A600857454 /* ViewController.m */; };
 		16FD20AB22D518A600857454 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16FD20A922D518A600857454 /* Main.storyboard */; };
 		16FD20AD22D518A700857454 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16FD20AC22D518A700857454 /* Assets.xcassets */; };
 		16FD20B022D518A700857454 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16FD20AE22D518A700857454 /* LaunchScreen.storyboard */; };
 		16FD20B322D518A700857454 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 16FD20B222D518A700857454 /* main.m */; };
+		16FD20BB22D518DB00857454 /* DelegateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16FD20BA22D518DB00857454 /* DelegateViewController.m */; };
+		16FD20BE22D518E300857454 /* BossViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16FD20BD22D518E300857454 /* BossViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		16FD20A022D518A600857454 /* DandPDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DandPDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16FD20A322D518A600857454 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		16FD20A422D518A600857454 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		16FD20A622D518A600857454 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		16FD20A722D518A600857454 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		16FD20AA22D518A600857454 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		16FD20AC22D518A700857454 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		16FD20AF22D518A700857454 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		16FD20B122D518A700857454 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16FD20B222D518A700857454 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		16FD20B922D518DB00857454 /* DelegateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DelegateViewController.h; sourceTree = "<group>"; };
+		16FD20BA22D518DB00857454 /* DelegateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DelegateViewController.m; sourceTree = "<group>"; };
+		16FD20BC22D518E300857454 /* BossViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BossViewController.h; sourceTree = "<group>"; };
+		16FD20BD22D518E300857454 /* BossViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BossViewController.m; sourceTree = "<group>"; };
+		16FD20BF22D51E8200857454 /* SpellDelegateDeclaration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpellDelegateDeclaration.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,15 +62,18 @@
 		16FD20A222D518A600857454 /* DandPDemo */ = {
 			isa = PBXGroup;
 			children = (
+				16FD20BF22D51E8200857454 /* SpellDelegateDeclaration.h */,
 				16FD20A322D518A600857454 /* AppDelegate.h */,
 				16FD20A422D518A600857454 /* AppDelegate.m */,
-				16FD20A622D518A600857454 /* ViewController.h */,
-				16FD20A722D518A600857454 /* ViewController.m */,
 				16FD20A922D518A600857454 /* Main.storyboard */,
 				16FD20AC22D518A700857454 /* Assets.xcassets */,
 				16FD20AE22D518A700857454 /* LaunchScreen.storyboard */,
 				16FD20B122D518A700857454 /* Info.plist */,
 				16FD20B222D518A700857454 /* main.m */,
+				16FD20B922D518DB00857454 /* DelegateViewController.h */,
+				16FD20BA22D518DB00857454 /* DelegateViewController.m */,
+				16FD20BC22D518E300857454 /* BossViewController.h */,
+				16FD20BD22D518E300857454 /* BossViewController.m */,
 			);
 			path = DandPDemo;
 			sourceTree = "<group>";
@@ -141,8 +148,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16FD20A822D518A600857454 /* ViewController.m in Sources */,
 				16FD20B322D518A700857454 /* main.m in Sources */,
+				16FD20BE22D518E300857454 /* BossViewController.m in Sources */,
+				16FD20BB22D518DB00857454 /* DelegateViewController.m in Sources */,
 				16FD20A522D518A600857454 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
